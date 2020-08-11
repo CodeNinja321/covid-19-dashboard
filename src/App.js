@@ -6,7 +6,7 @@ import {
   Card,
   CardContent
 } from "@material-ui/core";
-import InfoBox from './InfoBox';
+import FactBox from './FactBox';
 import Map from './Map';
 import Table from './Table';
 import LineGraph from './LineGraph'
@@ -80,9 +80,9 @@ function App() {
         </div>
         
         <div className="app__stats">
-          <InfoBox title="Coronavirus cases" cases={countryInfo.todayCases} total={countryInfo.cases} />
-          <InfoBox title="Recovered" cases={countryInfo.todayRecovered} total={countryInfo.recovered} />
-          <InfoBox title="Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
+          <FactBox title="Coronavirus cases" cases={countryInfo.todayCases} total={countryInfo.cases} />
+          <FactBox title="Recovered" cases={countryInfo.todayRecovered} total={countryInfo.recovered} />
+          <FactBox title="Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
         </div>
               
       {/* Map */}
