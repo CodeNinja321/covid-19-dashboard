@@ -12,12 +12,15 @@ import Table from './Table';
 import LineGraph from './LineGraph'
 import './App.css';
 import { sortData } from './util';
+import "leaflet/dist/leaflet.css";
 
 function App() {
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState('worldwide');
   const [countryInfo, setCountryInfo] = useState({});
   const [tableData, setTableData] = useState([]);
+  const [mapCenter, setMapCenter] = useState({ lat: 62, lng: -7 });
+  const [mapZoom, setMapZoom] = useState(3);
 
   useEffect(() => {
     fetch('https://disease.sh/v3/covid-19/all')
@@ -85,14 +88,15 @@ function App() {
           <FactBox title="Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
         </div>
               
-      {/* Map */}
-        <Map />
+        <Map 
+          center={mapCenter}
+          zoom={mapZoom}
+        />
       </div>
       <Card className="app__right">  
         <CardContent>       
           <h3>LiveCases by Country</h3>
           <Table  countries={tableData} />
-          {/* Graph */}
           <h3>Worldwide new cases</h3>
           <LineGraph />
         </CardContent>  
