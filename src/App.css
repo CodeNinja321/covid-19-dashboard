@@ -4,6 +4,7 @@
 
 body{
   background-color: #f5f6fa;
+  /* background-color: #000; */
 }
 
 .app__header{
@@ -33,8 +34,22 @@ body{
   font-size: 2rem;
 }
 
+/* .test{
+  color: white !important;
+}
+
+.MuiSelect-icon,
+.MuiSelect-nativeInput,
+.MuiSelect-root,
+.MuiMenuItem-root,
+.darkMode{
+  background-color: #282828 !important;
+  color: white !important;
+} */
+
 .app__dropdown {
   background-color: white;
+  /* background-color: #282828; */
 }
 
 @media (max-width: 990px) {
