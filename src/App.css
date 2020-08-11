@@ -28,6 +28,15 @@ body{
   padding: 20px;
 }
 
+.app__header {
+  color: #fc3c3c;
+  font-size: 2rem;
+}
+
+.app__dropdown {
+  background-color: white;
+}
+
 @media (max-width: 990px) {
   .app{
     flex-direction: column;
